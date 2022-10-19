@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ssce results app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script> 
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper w-full min-h-20 flex justify-between p-8">
+   <div class="logo">
+<h2> <span class="abbr-logo font-semibold">SSCE</span> <span class="results font-semibold">Results</span></h2>
+   </div>
+   <div class="side-nav-wrapper flex gap-4 ">
+
+    <div class="signup font-semibold text-xl">
+sign up
+    </div>
+   <div class="login font-semibold text-xl">
+login
+   </div>
+   <div class="search-btn font-semibold text-xl text-center p-1">
+    search now
+       </div>
+   </div>
+ 
+    </div>
+</nav>
+<div class="welcome text-center p-12 text-3xl  m-4">
+    <h1 class="text-3x">
+        SSCE  <span class="welcome-logo">Results  out search for yours </span>and 
+    </h1>
+    <h2 class="text-xl m-1">
+        congration in advance 
+    </h2>
+
+
+</div>
+<div class="seacrh-wrapper flex justify-around m-24">
+
+    <div class="search-form">
+<form action="">
+    <input type="text" placeholder="search by index number" class=" rounded-xl text-center ">
+</form>
+    </div>
+    <!-- this is the dropdown code -->
+    <div class="flex flex-wrap  mb-4">
+        <div class="w-full sm:w-6/12 md:w-4/12 px-4">
+          <div class="relative inline-flex align-middle w-full">
+            <button  class=" btn text-white font-bold uppercase text-sm px-6 py-3 rounded-3xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 bg-emerald-700 ease-linear transition-all duration-150" type="button" onclick="openDropdown(event,'dropdown-id')">
+          section
+            </button>
+            <div class="  hidden bg-white  text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mb-1" id="dropdown-id">
+              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">
+             Science Section
+              </a>
+              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">
+             Arts section
+              </a>
+         
+              <div class="h-0 my-2 border border-solid border-t-0 border-slate-800 opacity-25"></div>
+              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">
+               seacrh by the section
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+      <script>
+        function openDropdown(event,dropdownID){
+          let element = event.target;
+          while(element.nodeName !== "BUTTON"){
+            element = element.parentNode;
+          }
+          var popper = Popper.createPopper(element, document.getElementById(dropdownID), {
+            placement: 'top-end'
+          });
+          document.getElementById(dropdownID).classList.toggle("hidden");
+          document.getElementById(dropdownID).classList.toggle("block");
+        }
+      </script>
+</div>
+
+<div class="details-card ">
+    <div class="student-image">
+
+    </div>
+    <div class="student-details flex justify-center">
+       <div class="bg-gray-200 student-card p-4 rounded-md shadow-xl mb-8">
+
+       <img class="image w-28 h-28 rounded-full bg-black m-auto shadow-md" src="assets/tech.jpg" alt="">
+
+        
+      <div class="mt-8">
+        <p class="mt-2 mb-4 ml-4 "><span class="font-bold text-xl  ">  Full Name:</span> <span class="text-gray-600 leading-5 font-semibold ml-14"> GODWILL LOUIS DAU</span></p>
+        <p class="mt-2 mb-4 ml-4"><span class="font-bold text-xl  ">  Index NUmber:</span><span class="text-gray-600 leading-5 font-semibold ml-4"> 1120167</span></p>
+        <p class="mt-2 mb-4 ml-4"><span class="font-bold text-xl  ">  Section:</span><span class="text-gray-600 leading-5 font-semibold ml-20"> Science </span></p>
+        <p class="mt-2 mb-4 ml-4"><span class="font-bold text-xl  ">  GPE:</span><span class="text-gray-600 leading-5 font-semibold ml-28"> 95% (A)</span></p>
+        <p class="mt-2 mb-4 ml-4"><span class="font-bold text-xl  ">  Remarks:</span><span class="text-gray-600 leading-5 font-semibold ml-20"> Exellent</span></p>
+      </div>
+       </div>
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
